@@ -1,0 +1,213 @@
+{
+  "tool": {
+    "id": "bisap",
+    "title": "Escore BISAP",
+    "short": "Gravidade da pancreatite aguda nas primeiras 24 h",
+    "desc": "Calcule o escore BISAP nas primeiras 24 horas da pancreatite aguda: ureia, estado mental, SIRS, idade e derrame pleural para prever mortalidade.",
+    "lead": "Escore simples, feito à beira do leito nas primeiras 24 horas, que identifica pacientes com pancreatite aguda com maior risco de morte hospitalar, falência orgânica e necrose.",
+    "spec": [
+      "gastroenterologia",
+      "cirurgia-do-aparelho-digestivo",
+      "medicina-de-emergencia",
+      "medicina-intensiva",
+      "cirurgia-geral"
+    ],
+    "fields": [
+      [
+        "bun",
+        "Ureia &gt; 53 mg/dL (BUN &gt; 25 mg/dL)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "mental",
+        "Alteração do estado mental (Glasgow &lt; 15)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "sirs",
+        "SIRS (2 ou mais critérios)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "idade",
+        "Idade &gt; 60 anos",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "derrame",
+        "Derrame pleural na imagem",
+        "chk",
+        {
+          "pts": 1
+        }
+      ]
+    ],
+    "score": {
+      "label": "BISAP",
+      "unit": "de 5",
+      "bands": [
+        [
+          0,
+          "low",
+          "BISAP 0 a 2: menor risco de mortalidade",
+          "Mortalidade abaixo de 1% no grupo de menor risco da derivação; manter reavaliação clínica nas primeiras 48 h."
+        ],
+        [
+          3,
+          "high",
+          "BISAP ≥ 3: risco aumentado de mortalidade e complicações",
+          "Associado a falência orgânica (OR 7,4), falência persistente (OR 12,7) e necrose pancreática (OR 3,8); considerar UTI ou unidade intermediária."
+        ]
+      ]
+    },
+    "formula": "<p>Um ponto para cada item presente nas primeiras 24 horas: <strong>B</strong>UN &gt; 25 mg/dL (ureia &gt; 53 mg/dL), <strong>I</strong>mpaired mental status, <strong>S</strong>IRS, <strong>A</strong>ge &gt; 60 anos e <strong>P</strong>leural effusion.</p><p>SIRS: 2 ou mais entre temperatura &lt; 36 ou &gt; 38 °C, FC &gt; 90 bpm, FR &gt; 20 irpm ou PaCO₂ &lt; 32 mmHg, leucócitos &lt; 4.000 ou &gt; 12.000/mm³ ou &gt; 10% de bastões.</p>",
+    "table": [
+      [
+        "BISAP",
+        "Interpretação"
+      ],
+      [
+        "0 a 2",
+        "Menor risco"
+      ],
+      [
+        "≥ 3",
+        "Risco aumentado de morte, falência orgânica e necrose"
+      ]
+    ],
+    "table_note": "Mortalidade de &lt; 1% no grupo de menor risco a &gt; 20% no de maior risco na derivação (Wu 2008). Associações com falência orgânica e necrose: validação prospectiva de Singh (2009).",
+    "tips": [
+      "Calcule nas primeiras 24 horas; a gravidade definitiva é dada pela classificação de Atlanta revisada (falência orgânica transitória ou persistente &gt; 48 h).",
+      "A SIRS persistente por mais de 48 h é, isoladamente, um bom marcador de evolução grave: reavalie diariamente.",
+      "Converta a unidade: BUN 25 mg/dL corresponde a ureia de cerca de 53 mg/dL.",
+      "Nenhum escore substitui a reavaliação clínica: hidratação com cristaloide balanceado, analgesia e dieta oral precoce conforme a tolerância."
+    ],
+    "sources": [
+      [
+        "Wu BU et al. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut, 2008.",
+        "https://doi.org/10.1136/gut.2008.152702"
+      ],
+      [
+        "Singh VK et al. A prospective evaluation of the bedside index for severity in acute pancreatitis score in assessing mortality and intermediate markers of severity in acute pancreatitis. Am J Gastroenterol, 2009.",
+        "https://doi.org/10.1038/ajg.2009.28"
+      ],
+      [
+        "Banks PA et al. Classification of acute pancreatitis—2012: revision of the Atlanta classification and definitions by international consensus. Gut, 2013.",
+        "https://doi.org/10.1136/gutjnl-2012-302779"
+      ]
+    ],
+    "cases": [
+      [
+        "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        {
+          "idade": true,
+          "sirs": true
+        },
+        {
+          "score": 2,
+          "level": "low"
+        }
+      ],
+      [
+        "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        {
+          "bun": true,
+          "sirs": true,
+          "derrame": true
+        },
+        {
+          "score": 3,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 5",
+      "label": "BISAP",
+      "fields": [
+        [
+          "bun",
+          "chk",
+          1
+        ],
+        [
+          "mental",
+          "chk",
+          1
+        ],
+        [
+          "sirs",
+          "chk",
+          1
+        ],
+        [
+          "idade",
+          "chk",
+          1
+        ],
+        [
+          "derrame",
+          "chk",
+          1
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "BISAP 0 a 2: menor risco de mortalidade",
+          "Mortalidade abaixo de 1% no grupo de menor risco da derivação; manter reavaliação clínica nas primeiras 48 h."
+        ],
+        [
+          3,
+          "high",
+          "BISAP ≥ 3: risco aumentado de mortalidade e complicações",
+          "Associado a falência orgânica (OR 7,4), falência persistente (OR 12,7) e necrose pancreática (OR 3,8); considerar UTI ou unidade intermediária."
+        ]
+      ]
+    },
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 2,
+      "passed": 2,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}

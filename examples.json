@@ -1,0 +1,36 @@
+[
+  {
+    "label": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+    "input": {
+      "idade": true,
+      "sirs": true
+    },
+    "expected": {
+      "score": 2,
+      "level": "low"
+    },
+    "originalInput": {
+      "idade": true,
+      "sirs": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+    "input": {
+      "bun": true,
+      "sirs": true,
+      "derrame": true
+    },
+    "expected": {
+      "score": 3,
+      "level": "high"
+    },
+    "originalInput": {
+      "bun": true,
+      "sirs": true,
+      "derrame": true
+    },
+    "expandedZeroOptions": []
+  }
+]
