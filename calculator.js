@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-bisap · Elucenia · https://github.com/Elucenia/tool-bisap
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"bisap","title":"Escore BISAP","fields":[["bun","Ureia &gt; 53 mg/dL (BUN &gt; 25 mg/dL)","chk",{"pts":1}],["mental","Alteração do estado mental (Glasgow &lt; 15)","chk",{"pts":1}],["sirs","SIRS (2 ou mais critérios)","chk",{"pts":1}],["idade","Idade &gt; 60 anos","chk",{"pts":1}],["derrame","Derrame pleural na imagem","chk",{"pts":1}]],"config":{"unit":"de 5","label":"BISAP","fields":[["bun","chk",1],["mental","chk",1],["sirs","chk",1],["idade","chk",1],["derrame","chk",1]],"bands":[[0,"low","BISAP 0 a 2: menor risco de mortalidade","Mortalidade abaixo de 1% no grupo de menor risco da derivação; manter reavaliação clínica nas primeiras 48 h."],[3,"high","BISAP ≥ 3: risco aumentado de mortalidade e complicações","Associado a falência orgânica (OR 7,4), falência persistente (OR 12,7) e necrose pancreática (OR 3,8); considerar UTI ou unidade intermediária."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
