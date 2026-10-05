@@ -1,36 +1,81 @@
 [
   {
-    "label": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
-    "input": {
+    "id": "bisap",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+    "originalInput": {
       "idade": true,
       "sirs": true
+    },
+    "input": {
+      "idade": true,
+      "sirs": true,
+      "bun": false,
+      "mental": false,
+      "derrame": false
     },
     "expected": {
       "score": 2,
       "level": "low"
     },
-    "originalInput": {
-      "idade": true,
-      "sirs": true
+    "recordedResult": {
+      "main": [
+        "2",
+        "de 5"
+      ],
+      "label": "BISAP",
+      "raw": {
+        "score": 2
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
-    "input": {
+    "id": "bisap",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+    "originalInput": {
       "bun": true,
       "sirs": true,
       "derrame": true
+    },
+    "input": {
+      "bun": true,
+      "sirs": true,
+      "derrame": true,
+      "mental": false,
+      "idade": false
     },
     "expected": {
       "score": 3,
       "level": "high"
     },
-    "originalInput": {
-      "bun": true,
-      "sirs": true,
-      "derrame": true
+    "recordedResult": {
+      "main": [
+        "3",
+        "de 5"
+      ],
+      "label": "BISAP",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

@@ -1,0 +1,79 @@
+<!-- ELUCENIA technical documentation · bisap · ar · no clinical/professional/rights approval -->
+
+# درجة BISAP
+
+[الشروط والمصادر والأذونات](https://elucenia.org/ar/tools/bisap)
+
+## كيفية الاستخدام
+
+استخدم الأداة في البوابة أو افتح index.html عبر خادم HTTP محلي. اختر اللغة، وأكمل الحقول، ثم أجرِ الحساب.
+
+## المدخلات والوحدات
+
+### اليوريا \> ٥٣ mg/dL (BUN \> ٢٥ mg/dL)
+
+`bun`
+
+### تغير الحالة الذهنية (Glasgow \< ١٥)
+
+`mental`
+
+### SIRS (معياران أو أكثر)
+
+`sirs`
+
+### العمر \> ٦٠ سنوات
+
+`idade`
+
+### انصباب جنبي في التصوير
+
+`derrame`
+
+## إصدار الطريقة
+
+BISAP/Wu 2008: 5 عوامل، أول 24 h؛ BUN \>25 mg/dL؛ عمر \>60
+
+## المعادلة الموثقة
+
+1 نقطة لكل بند بأول 24 ساعة: BUN \>25 mg/dL (يوريا \>53 mg/dL)، I تغيّر ذهني، SIRS، A عمر \>60 سنة، P انصباب جنبي.
+
+SIRS: ≥2 من حرارة \<36 أو \>38 °C، نبض \>90 bpm، تنفّس \>20/دقيقة أو PaCO₂ \<32 mmHg، كريات بيضاء \<4000 أو \>12000/mm³ أو \>10% أشكال عصوية.
+
+## الحدود والفئة السكانية
+
+تستخدم BISAP لعام 2008 بيانات أول 24 ساعة من التهاب البنكرياس الحاد لتصنيف خطر الوفاة داخل المستشفى. يمثل BUN \>25 mg/dL والعمر \>60 سنة بندين في الدرجة، وليسَا حدين أدنى للقبول في الدراسة. يعتمد تقييم النخر وفشل الأعضاء وقابلية التطبيق على الفئات الفرعية على مصادرها الخاصة؛ ولا تمثل المعدلات المرصودة يقينًا إنذاريًا فرديًا.
+
+## المراجع
+
+- [Wu BU et al. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut, 2008.](https://doi.org/10.1136/gut.2008.152702)
+
+- [Singh VK et al. A prospective evaluation of the bedside index for severity in acute pancreatitis score in assessing mortality and intermediate markers of severity in acute pancreatitis. Am J Gastroenterol, 2009.](https://doi.org/10.1038/ajg.2009.28)
+
+- [Banks PA et al. Classification of acute pancreatitis—2012: revision of the Atlanta classification and definitions by international consensus. Gut, 2013.](https://doi.org/10.1136/gutjnl-2012-302779)
+
+## إعادة إجراء الاختبارات التقنية
+
+شغّل node test.cjs في المجلد الجذري لهذا المستودع لتكرار الحالات الاصطناعية المسجلة. تُحفظ المدخلات والنتائج المتوقعة وحدود التفاوت الأصلية. لا تُعدّ الاختبارات التقنية تحققًا سريريًا.
+
+```sh
+node test.cjs
+```
+
+يحتوي tool.json على المصادر والإصدار ونطاق المراجعة. يحتفظ examples.json بالمدخلات والنتائج المتوقعة للحالات الاصطناعية؛ ويسجل results.json النتائج التي تم الحصول عليها.
+
+[السجل والمراجع](../tool.json) · [شيفرة JavaScript](../calculator.js) · [حالات مرجعية](../examples.json) · [results.json](../results.json)
+
+## المراجعة وشروط الاستخدام
+
+لم تُجرَ مراجعة سريرية مستقلة.
+
+هذه الواجهة ترجمة أعدّها مؤلفوها، وليست إصدارًا رسميًا أو معتمدًا. لم تُجرَ مراجعة سريرية مستقلة أو مراجعة لغوية مهنية، ولم تُستكمل الموافقة على حقوق استخدام الأدوات.
+
+نتيجة المعادلة أو التصنيف. يعتمد التفسير والتصرف ومدى الانطباق على التقييم المهني والمصدر المحدد.
+
+## الترخيص ونسبة العمل إلى أصحابه
+
+ينطبق Apache-2.0 على كود ELUCENIA فقط. تبقى حقوق الأدوات والمنشورات والترجمات والبيانات لأصحابها المعنيين. احتفظ بملفّي LICENSE وNOTICE.
+
+ELUCENIA · Felipe Guedes · Copyright © 2026

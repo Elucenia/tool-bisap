@@ -5,6 +5,7 @@
     "short": "Gravidade da pancreatite aguda nas primeiras 24 h",
     "desc": "Calcule o escore BISAP nas primeiras 24 horas da pancreatite aguda: ureia, estado mental, SIRS, idade e derrame pleural para prever mortalidade.",
     "lead": "Escore simples, feito à beira do leito nas primeiras 24 horas, que identifica pacientes com pancreatite aguda com maior risco de morte hospitalar, falência orgânica e necrose.",
+    "kind": "Escore",
     "spec": [
       "gastroenterologia",
       "cirurgia-do-aparelho-digestivo",
@@ -17,83 +18,34 @@
         "bun",
         "Ureia &gt; 53 mg/dL (BUN &gt; 25 mg/dL)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "mental",
         "Alteração do estado mental (Glasgow &lt; 15)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "sirs",
         "SIRS (2 ou mais critérios)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "idade",
         "Idade &gt; 60 anos",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "derrame",
         "Derrame pleural na imagem",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ]
     ],
-    "score": {
-      "label": "BISAP",
-      "unit": "de 5",
-      "bands": [
-        [
-          0,
-          "low",
-          "BISAP 0 a 2: menor risco de mortalidade",
-          "Mortalidade abaixo de 1% no grupo de menor risco da derivação; manter reavaliação clínica nas primeiras 48 h."
-        ],
-        [
-          3,
-          "high",
-          "BISAP ≥ 3: risco aumentado de mortalidade e complicações",
-          "Associado a falência orgânica (OR 7,4), falência persistente (OR 12,7) e necrose pancreática (OR 3,8); considerar UTI ou unidade intermediária."
-        ]
-      ]
-    },
     "formula": "<p>Um ponto para cada item presente nas primeiras 24 horas: <strong>B</strong>UN &gt; 25 mg/dL (ureia &gt; 53 mg/dL), <strong>I</strong>mpaired mental status, <strong>S</strong>IRS, <strong>A</strong>ge &gt; 60 anos e <strong>P</strong>leural effusion.</p><p>SIRS: 2 ou mais entre temperatura &lt; 36 ou &gt; 38 °C, FC &gt; 90 bpm, FR &gt; 20 irpm ou PaCO₂ &lt; 32 mmHg, leucócitos &lt; 4.000 ou &gt; 12.000/mm³ ou &gt; 10% de bastões.</p>",
-    "table": [
-      [
-        "BISAP",
-        "Interpretação"
-      ],
-      [
-        "0 a 2",
-        "Menor risco"
-      ],
-      [
-        "≥ 3",
-        "Risco aumentado de morte, falência orgânica e necrose"
-      ]
-    ],
-    "table_note": "Mortalidade de &lt; 1% no grupo de menor risco a &gt; 20% no de maior risco na derivação (Wu 2008). Associações com falência orgânica e necrose: validação prospectiva de Singh (2009).",
-    "tips": [
-      "Calcule nas primeiras 24 horas; a gravidade definitiva é dada pela classificação de Atlanta revisada (falência orgânica transitória ou persistente &gt; 48 h).",
-      "A SIRS persistente por mais de 48 h é, isoladamente, um bom marcador de evolução grave: reavalie diariamente.",
-      "Converta a unidade: BUN 25 mg/dL corresponde a ureia de cerca de 53 mg/dL.",
-      "Nenhum escore substitui a reavaliação clínica: hidratação com cristaloide balanceado, analgesia e dieta oral precoce conforme a tolerância."
-    ],
     "sources": [
       [
         "Wu BU et al. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut, 2008.",
@@ -133,53 +85,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 5",
-      "label": "BISAP",
-      "fields": [
-        [
-          "bun",
-          "chk",
-          1
-        ],
-        [
-          "mental",
-          "chk",
-          1
-        ],
-        [
-          "sirs",
-          "chk",
-          1
-        ],
-        [
-          "idade",
-          "chk",
-          1
-        ],
-        [
-          "derrame",
-          "chk",
-          1
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "BISAP 0 a 2: menor risco de mortalidade",
-          "Mortalidade abaixo de 1% no grupo de menor risco da derivação; manter reavaliação clínica nas primeiras 48 h."
-        ],
-        [
-          3,
-          "high",
-          "BISAP ≥ 3: risco aumentado de mortalidade e complicações",
-          "Associado a falência orgânica (OR 7,4), falência persistente (OR 12,7) e necrose pancreática (OR 3,8); considerar UTI ou unidade intermediária."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -188,17 +93,486 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T16:56:01.112Z",
+      "total": 32,
+      "passed": 32,
+      "sourceRowCount": 32,
+      "uniqueApiInputCount": 32,
+      "sourceContextCount": 32,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "31de369d8ee31e400c3e69d293a2a64d46354910e183540a2e50fb4653c60342",
+        "total": 32,
+        "bankRowCount": 32,
+        "uniqueApiInputCount": 32,
+        "sourceContextCount": 32,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+            "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+          },
+          {
+            "file": "reports/review-20261003/eight-risk-independent-expectations-final26.json",
+            "sha256": "f5e7d0e09fb4dadaa01dd489cbca1ad3ee8e847771b8409947f3fc43ad7f4a82"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+          "sha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce"
+        },
+        "packagingRequirement": "Copy this score-only complete bank into fresh frozen26 packages only after metadata/source composition and independent peer."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 32,
+        "uniqueApiInputs": 32,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+          "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+        }
+      },
+      "scope": "Exact weighted integer sum of 32 exhaustive represented caller-selected point/binary tuples for bisap. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded.",
+      "sources": [
+        {
+          "id": "bisap",
+          "edition": "Wu2008 Gut57:1698–1703; Singh2009 prospective evaluation distinguished",
+          "url": "https://gut.bmj.com/content/57/12/1698",
+          "doi": "10.1136/gut.2008.152702",
+          "access": "Publisher/PDF returned403. Original paper full-text extraction on ResearchGate was opened/read; abstract, Methods, validation and Discussion passages confirmed. No PDF image or visual original operator claimed.",
+          "readScope": [
+            "Original paper indexed full-text abstract",
+            "Assessment of risk factors/24hour collection, lines362–465",
+            "Validation points and Table2 extraction, lines658–740,946–977",
+            "Mental-status Discussion, lines1005–1034"
+          ],
+          "notVerified": [
+            "OriginalPDF/SIRS operator by image",
+            "Urea>53mg/dL as exact BUN25 conversion",
+            "GCS<15 as exhaustive original mental-status eligibility",
+            "Severity/organ-failure diagnosis, forecast probabilities or treatment"
+          ],
+          "sourceComponent": "Selected integer point sum only; detailed clinical cohort/band facts remain in the frozen original source review."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+      "evidenceSha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce",
+      "originalEvidence": {
+        "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+        "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred.",
+        "recordedAt": "2026-10-04T18:58:09.334Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred."
+        },
+        "peer": {
+          "file": "reports/review-20261003/eight-point-total-source-evidence-independent-peer-final26-r2.json",
+          "sha256": "6d1b854d021eef9f0f5916ed7f81a70dc8359dae5824f2508c70d29b33732d5c",
+          "summary": {
+            "checks": 8278,
+            "failed": 0,
+            "methods": 8,
+            "sourceRows": 1132,
+            "uniqueInputs": 1132,
+            "freshExecutions": 3396,
+            "helperAssertions": 6888,
+            "metadataMethods": 128,
+            "metadataRows": 53752,
+            "metadataUnique": 53680,
+            "metadataRepeats": 72
+          },
+          "scope": "Root independent peer of exact46 preimages/afterimages; independently frozen1132 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all18 previous scopes;24 fresh Node helper executions replay all8 selected-point components without clinical approval."
+        },
+        "application": {
+          "file": "reports/review-20261003/eight-point-total-source-evidence-application-final26.json",
+          "sha256": "ff192c36cc1774e583fe2b8bcdd2e10b275e774ff633d180534b012cfe5b87e3"
+        },
+        "reviewedBankScope": "Exact weighted integer sum of 32 exhaustive represented caller-selected point/binary tuples for bisap. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded.",
+        "currentBinding": {
+          "source26BankSha256": "69c417f943e76b74f6d7b0f6846fa0151a0d565704f15eceaa314aa3605b7439",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/bisap/calculator.js",
+              "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/bisap/calculator.js",
+              "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/bisap/calculator.js",
+              "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 96,
+      "actualVmExecutions": 96,
+      "implementations": [
+        {
+          "id": "bisap",
+          "app": "website",
+          "file": "apps/website/private/tool-code/bisap/calculator.js",
+          "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+        },
+        {
+          "id": "bisap",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/bisap/calculator.js",
+          "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+        },
+        {
+          "id": "bisap",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/bisap/calculator.js",
+          "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+        }
+      ],
+      "qualifications": [
+        "Exact weighted integer sum of 32 exhaustive represented caller-selected point/binary tuples for bisap. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded.",
+        "All862 historical fixtures and every field/formula/version/approval unchanged by this candidate. Original source/clinical failures and edition warnings are not overwritten.",
+        "Four inline metadata rows are only a subset of the complete hashed downloadable bank. Independent professional/clinical/rights and full-method approvals are not performed."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "BISAP/Wu 2008:5 fatores, primeiras 24 h; BUN>25 mg/d L; idade>60",
+    "implementationVersion": "bisap@native-2026-10-03+77733daf6e1d",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/18519429/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Um ponto para cada item presente nas primeiras 24 horas: B UN > 25 mg/dL (ureia > 53 mg/dL), I mpaired mental status, S IRS, A ge > 60 anos e P leural effusion. SIRS: 2 ou mais entre temperatura < 36 ou > 38 °C, FC > 90 bpm, FR > 20 irpm ou PaCO₂ < 32 mmHg, leucócitos < 4.000 ou > 12.000/mm³ ou > 10% de bastões.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "bun",
+            "label": "Ureia &gt; 53 mg/dL (BUN &gt; 25 mg/dL)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "mental",
+            "label": "Alteração do estado mental (Glasgow &lt; 15)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "sirs",
+            "label": "SIRS (2 ou mais critérios)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "idade",
+            "label": "Idade &gt; 60 anos",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "derrame",
+            "label": "Derrame pleural na imagem",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "530b17a5298d77a65dcee1f68cbab930a4cce41114b75e3a332929f8f3669272"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Wu BU et al. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut, 2008.",
+          "url": "https://doi.org/10.1136/gut.2008.152702",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The early prediction of mortality in acute pancreatitis: a large population-based study.",
+            "year": "2008",
+            "firstPublicationDate": "2008-06-02",
+            "doi": "10.1136/gut.2008.152702",
+            "pmid": "18519429",
+            "journal": "Gut",
+            "authors": "Wu BU, Johannes RS, Sun X, Tabak Y, Conwell DL, Banks PA."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/18519429/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "1347c2d3bef60b56bb6d03fd1e79671b3408044890a3a170a41dd43d735cce4c",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Singh VK et al. A prospective evaluation of the bedside index for severity in acute pancreatitis score in assessing mortality and intermediate markers of severity in acute pancreatitis. Am J Gastroenterol, 2009.",
+          "url": "https://doi.org/10.1038/ajg.2009.28",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "A prospective evaluation of the bedside index for severity in acute pancreatitis score in assessing mortality and intermediate markers of severity in acute pancreatitis.",
+            "year": "2009",
+            "firstPublicationDate": "2009-03-17",
+            "doi": "10.1038/ajg.2009.28",
+            "pmid": "19293787",
+            "journal": "The American journal of gastroenterology",
+            "authors": "Singh VK, Wu BU, Bollen TL, Repas K, Maurer R, Johannes RS, Mortele KJ, Conwell DL, Banks PA."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/19293787/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "bff0a5927159b40a75d9ddbf7afc8d1c4d0f0dd59d502d5bd8c619bfd689ced6",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Banks PA et al. Classification of acute pancreatitis—2012: revision of the Atlanta classification and definitions by international consensus. Gut, 2013.",
+          "url": "https://doi.org/10.1136/gutjnl-2012-302779",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Classification of acute pancreatitis--2012: revision of the Atlanta classification and definitions by international consensus.",
+            "year": "2013",
+            "firstPublicationDate": "2012-10-25",
+            "doi": "10.1136/gutjnl-2012-302779",
+            "pmid": "23100216",
+            "journal": "Gut",
+            "authors": "Banks PA, Bollen TL, Dervenis C, Gooszen HG, Johnson CD, Sarr MG, Tsiotos GG, Vege SS, Acute Pancreatitis Classification Working Group."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/23100216/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "ac943981eaef3275b406aff152f1caa5fef49f1b1be2ef4f25fa665648bf0df1",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T16:56:01.112Z",
+        "total": 32,
+        "passed": 32,
+        "sourceRowCount": 32,
+        "uniqueApiInputCount": 32,
+        "sourceContextCount": 32,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "31de369d8ee31e400c3e69d293a2a64d46354910e183540a2e50fb4653c60342",
+          "total": 32,
+          "bankRowCount": 32,
+          "uniqueApiInputCount": 32,
+          "sourceContextCount": 32,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+              "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+            },
+            {
+              "file": "reports/review-20261003/eight-risk-independent-expectations-final26.json",
+              "sha256": "f5e7d0e09fb4dadaa01dd489cbca1ad3ee8e847771b8409947f3fc43ad7f4a82"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+            "sha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce"
+          },
+          "packagingRequirement": "Copy this score-only complete bank into fresh frozen26 packages only after metadata/source composition and independent peer."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 32,
+          "uniqueApiInputs": 32,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+            "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+          }
+        },
+        "scope": "Exact weighted integer sum of 32 exhaustive represented caller-selected point/binary tuples for bisap. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded.",
+        "sources": [
+          {
+            "id": "bisap",
+            "edition": "Wu2008 Gut57:1698–1703; Singh2009 prospective evaluation distinguished",
+            "url": "https://gut.bmj.com/content/57/12/1698",
+            "doi": "10.1136/gut.2008.152702",
+            "access": "Publisher/PDF returned403. Original paper full-text extraction on ResearchGate was opened/read; abstract, Methods, validation and Discussion passages confirmed. No PDF image or visual original operator claimed.",
+            "readScope": [
+              "Original paper indexed full-text abstract",
+              "Assessment of risk factors/24hour collection, lines362–465",
+              "Validation points and Table2 extraction, lines658–740,946–977",
+              "Mental-status Discussion, lines1005–1034"
+            ],
+            "notVerified": [
+              "OriginalPDF/SIRS operator by image",
+              "Urea>53mg/dL as exact BUN25 conversion",
+              "GCS<15 as exhaustive original mental-status eligibility",
+              "Severity/organ-failure diagnosis, forecast probabilities or treatment"
+            ],
+            "sourceComponent": "Selected integer point sum only; detailed clinical cohort/band facts remain in the frozen original source review."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+        "evidenceSha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce",
+        "originalEvidence": {
+          "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+          "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred.",
+          "recordedAt": "2026-10-04T18:58:09.334Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred."
+          },
+          "peer": {
+            "file": "reports/review-20261003/eight-point-total-source-evidence-independent-peer-final26-r2.json",
+            "sha256": "6d1b854d021eef9f0f5916ed7f81a70dc8359dae5824f2508c70d29b33732d5c",
+            "summary": {
+              "checks": 8278,
+              "failed": 0,
+              "methods": 8,
+              "sourceRows": 1132,
+              "uniqueInputs": 1132,
+              "freshExecutions": 3396,
+              "helperAssertions": 6888,
+              "metadataMethods": 128,
+              "metadataRows": 53752,
+              "metadataUnique": 53680,
+              "metadataRepeats": 72
+            },
+            "scope": "Root independent peer of exact46 preimages/afterimages; independently frozen1132 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all18 previous scopes;24 fresh Node helper executions replay all8 selected-point components without clinical approval."
+          },
+          "application": {
+            "file": "reports/review-20261003/eight-point-total-source-evidence-application-final26.json",
+            "sha256": "ff192c36cc1774e583fe2b8bcdd2e10b275e774ff633d180534b012cfe5b87e3"
+          },
+          "reviewedBankScope": "Exact weighted integer sum of 32 exhaustive represented caller-selected point/binary tuples for bisap. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded.",
+          "currentBinding": {
+            "source26BankSha256": "69c417f943e76b74f6d7b0f6846fa0151a0d565704f15eceaa314aa3605b7439",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/bisap/calculator.js",
+                "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/bisap/calculator.js",
+                "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/bisap/calculator.js",
+                "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 96,
+        "actualVmExecutions": 96,
+        "implementations": [
+          {
+            "id": "bisap",
+            "app": "website",
+            "file": "apps/website/private/tool-code/bisap/calculator.js",
+            "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+          },
+          {
+            "id": "bisap",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/bisap/calculator.js",
+            "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+          },
+          {
+            "id": "bisap",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/bisap/calculator.js",
+            "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+          }
+        ],
+        "qualifications": [
+          "Exact weighted integer sum of 32 exhaustive represented caller-selected point/binary tuples for bisap. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded.",
+          "All862 historical fixtures and every field/formula/version/approval unchanged by this candidate. Original source/clinical failures and edition warnings are not overwritten.",
+          "Four inline metadata rows are only a subset of the complete hashed downloadable bank. Independent professional/clinical/rights and full-method approvals are not performed."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+    },
+    "limits": "O BISAP de 2008 utiliza dados das primeiras 24 horas da pancreatite aguda para estratificar risco de morte hospitalar. BUN >25 mg/dL e idade >60 anos são itens do escore, não critérios mínimos de inclusão. Avaliação de necrose, falência orgânica e aplicabilidade a subgrupos dependem das respectivas fontes; taxas observadas não constituem certeza prognóstica individual.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.880Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Necrose e falência orgânica no lead não foram desfechos verificados neste resumo original, dependem do estudo posterior. Exclusões/faixa etária completa não constam."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/bisap/calculator.js",
+    "bytes": 4862,
+    "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "7b4b41c7774548bbd94c9f999c892ef9b5c44c60e5fa9a8f4bbceb6c6c52c4b7",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "05b2bc7533d87edc20b90e7e922f02436b3f1d85ecaf0d5ec3d6ce9fa84d0df6",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "05b2bc7533d87edc20b90e7e922f02436b3f1d85ecaf0d5ec3d6ce9fa84d0df6",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

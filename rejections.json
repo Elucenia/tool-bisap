@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean bun",
+    "input": {
+      "idade": true,
+      "sirs": true,
+      "bun": "2",
+      "mental": false,
+      "derrame": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bun"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean mental",
+    "input": {
+      "idade": true,
+      "sirs": true,
+      "bun": false,
+      "mental": "2",
+      "derrame": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "mental"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean sirs",
+    "input": {
+      "idade": true,
+      "sirs": "2",
+      "bun": false,
+      "mental": false,
+      "derrame": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "sirs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean idade",
+    "input": {
+      "idade": "2",
+      "sirs": true,
+      "bun": false,
+      "mental": false,
+      "derrame": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean derrame",
+    "input": {
+      "idade": true,
+      "sirs": true,
+      "bun": false,
+      "mental": false,
+      "derrame": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "derrame"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]
