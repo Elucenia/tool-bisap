@@ -77,3 +77,21 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+BISAP 0 a 2: minore rischio di mortalità
+
+Mortalità inferiore a 1% nel gruppo a minor rischio della derivazione; mantenere la rivalutazione clinica nelle prime 48 h.
+
+
+### 2
+
+BISAP ≥ 3: aumento del rischio di mortalità e complicanze
+
+Associato a insufficienza d'organo (OR 7,4), insufficienza persistente (OR 12,7) e necrosi pancreatica (OR 3,8); considerare terapia intensiva o unità di intensità intermedia.
+

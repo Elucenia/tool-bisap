@@ -255,7 +255,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "BISAP/Wu 2008:5 fatores, primeiras 24 h; BUN>25 mg/d L; idade>60",
-    "implementationVersion": "bisap@native-2026-10-03+77733daf6e1d",
+    "implementationVersion": "bisap@native-2026-10-05+61de965e0af5",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/18519429/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -537,7 +537,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+      "implementationHash": "61de965e0af5b09286e054586b91baf08b005c4833cb3d4bae893c5ee6c9171d",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "bisap@native-2026-10-03+77733daf6e1d",
+          "previousImplementationHash": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29",
+          "implementationHash": "61de965e0af5b09286e054586b91baf08b005c4833cb3d4bae893c5ee6c9171d",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "530b17a5298d77a65dcee1f68cbab930a4cce41114b75e3a332929f8f3669272",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O BISAP de 2008 utiliza dados das primeiras 24 horas da pancreatite aguda para estratificar risco de morte hospitalar. BUN >25 mg/dL e idade >60 anos são itens do escore, não critérios mínimos de inclusão. Avaliação de necrose, falência orgânica e aplicabilidade a subgrupos dependem das respectivas fontes; taxas observadas não constituem certeza prognóstica individual.",
     "sourceLimitEvidence": {
@@ -556,20 +584,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/bisap/calculator.js",
-    "bytes": 4862,
-    "sha256": "77733daf6e1d5d5f9b1fca6f7b305b6b001ef88de05ea857d44caa30bbac6e29"
+    "bytes": 5067,
+    "sha256": "61de965e0af5b09286e054586b91baf08b005c4833cb3d4bae893c5ee6c9171d"
   },
-  "sourceToolSha256": "7b4b41c7774548bbd94c9f999c892ef9b5c44c60e5fa9a8f4bbceb6c6c52c4b7",
+  "sourceToolSha256": "e9ec74567a1d8813bce3389b58a3ec2c5672d725a0ceee94a3d2d16baec5ff85",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "05b2bc7533d87edc20b90e7e922f02436b3f1d85ecaf0d5ec3d6ce9fa84d0df6",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "05b2bc7533d87edc20b90e7e922f02436b3f1d85ecaf0d5ec3d6ce9fa84d0df6",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

@@ -77,3 +77,21 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+BISAP 0 to 2: lower mortality risk
+
+Mortality below 1% in the derivation low-risk group; maintain clinical reassessment in the first 48 h.
+
+
+### 2
+
+BISAP ≥ 3: increased risk of mortality and complications
+
+Associated with organ failure (OR 7,4), persistent failure (OR 12,7) and pancreatic necrosis (OR 3,8); consider ICU or intermediate care unit.
+

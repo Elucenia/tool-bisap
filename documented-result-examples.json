@@ -1,0 +1,367 @@
+{
+  "id": "bisap",
+  "implementationVersion": "bisap@native-2026-10-05+61de965e0af5",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 a 2: menor risco de mortalidade",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Mortalidade abaixo de 1% no grupo de menor risco da derivação; manter reavaliação clínica nas primeiras 48 h.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: risco aumentado de mortalidade e complicações",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Associado a falência orgânica (OR 7,4), falência persistente (OR 12,7) e necrose pancreática (OR 3,8); considerar UTI ou unidade intermediária.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 to 2: lower mortality risk",
+            "locale": "en",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "Mortality below 1% in the derivation low-risk group; maintain clinical reassessment in the first 48 h.",
+            "locale": "en",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: increased risk of mortality and complications",
+            "locale": "en",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "Associated with organ failure (OR 7,4), persistent failure (OR 12,7) and pancreatic necrosis (OR 3,8); consider ICU or intermediate care unit.",
+            "locale": "en",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 a 2: menor riesgo de mortalidad",
+            "locale": "es",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "Mortalidad por debajo de 1% en el grupo de menor riesgo de la derivación; mantener la reevaluación clínica en las primeras 48 h.",
+            "locale": "es",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: riesgo aumentado de mortalidad y complicaciones",
+            "locale": "es",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "Asociado con falla orgánica (OR 7,4), falla persistente (OR 12,7) y necrosis pancreática (OR 3,8); considerar UCI o unidad intermedia.",
+            "locale": "es",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 à 2 : risque de mortalité plus faible",
+            "locale": "fr",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "Mortalité inférieure à 1% dans le groupe de moindre risque de la dérivation ; maintenir une réévaluation clinique au cours des 48 premières h.",
+            "locale": "fr",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3 : risque accru de mortalité et de complications",
+            "locale": "fr",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "Associé à une défaillance d'organe (OR 7,4), à une défaillance persistante (OR 12,7) et à une nécrose pancréatique (OR 3,8) ; envisager une USI ou une unité intermédiaire.",
+            "locale": "fr",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 bis 2: geringeres Mortalitätsrisiko",
+            "locale": "de",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "Mortalität unter 1% in der Niedrigrisikogruppe der Ableitung; klinische Neubewertung in den ersten 48 h beibehalten.",
+            "locale": "de",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: erhöhtes Risiko für Mortalität und Komplikationen",
+            "locale": "de",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "Assoziiert mit Organversagen (OR 7,4), persistierendem Versagen (OR 12,7) und Pankreasnekrose (OR 3,8); ICU oder Zwischenpflegeeinheit erwägen.",
+            "locale": "de",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 a 2: minore rischio di mortalità",
+            "locale": "it",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "Mortalità inferiore a 1% nel gruppo a minor rischio della derivazione; mantenere la rivalutazione clinica nelle prime 48 h.",
+            "locale": "it",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: aumento del rischio di mortalità e complicanze",
+            "locale": "it",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "Associato a insufficienza d'organo (OR 7,4), insufficienza persistente (OR 12,7) e necrosi pancreatica (OR 3,8); considerare terapia intensiva o unità di intensità intermedia.",
+            "locale": "it",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 إلى 2: خطر وفيات أقل",
+            "locale": "ar",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "الوفيات أقل من 1% في مجموعة الخطر المنخفض في الاشتقاق؛ الحفاظ على إعادة التقييم السريري خلال أول 48 h.",
+            "locale": "ar",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: خطر متزايد للوفيات والمضاعفات",
+            "locale": "ar",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "مرتبط بفشل عضوي (OR 7,4)، وفشل مستمر (OR 12,7) ونخر بنكرياسي (OR 3,8)؛ يُنظر في العناية المركزة أو وحدة الرعاية المتوسطة.",
+            "locale": "ar",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0至2：较低死亡风险",
+            "locale": "zh",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "在推导的低风险组中死亡率低于1%；在最初48 h内保持临床复评。",
+            "locale": "zh",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3：死亡和并发症风险增加",
+            "locale": "zh",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "与器官衰竭（OR 7,4）、持续性衰竭（OR 12,7）和胰腺坏死（OR 3,8）相关；考虑 ICU 或中间监护病房。",
+            "locale": "zh",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0から2: 死亡リスクが低い",
+            "locale": "ja",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "導出低リスク群では死亡率1%未満。最初の48 hは臨床的再評価を維持する。",
+            "locale": "ja",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: 死亡および合併症のリスク増加",
+            "locale": "ja",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "臓器不全（OR 7,4）、持続性不全（OR 12,7）および膵壊死（OR 3,8）と関連；ICUまたは中間ケア病棟を検討する。",
+            "locale": "ja",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Idade &gt; 60 e SIRS: 2 pontos (menor risco)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP 0 से 2: मृत्यु का कम जोखिम",
+            "locale": "hi",
+            "template": "documented-authored-7acd64778e181c274a62"
+          },
+          "note": {
+            "text": "निर्धारण के निम्न-जोखिम समूह में मृत्यु दर 1% से कम; पहले 48 h में नैदानिक पुनर्मूल्यांकन बनाए रखें.",
+            "locale": "hi",
+            "template": "documented-authored-fe89e2c855a4a54a3ca0"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia &gt; 53, SIRS e derrame pleural: 3 pontos (risco aumentado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "BISAP ≥ 3: मृत्यु और जटिलताओं का बढ़ा हुआ जोखिम",
+            "locale": "hi",
+            "template": "documented-authored-75d23cfe1797d7250c2d"
+          },
+          "note": {
+            "text": "अंग विफलता (OR 7,4), स्थायी विफलता (OR 12,7) और अग्न्याशयी नेक्रोसिस (OR 3,8) से संबद्ध; ICU या इंटरमीडिएट केयर यूनिट पर विचार करें.",
+            "locale": "hi",
+            "template": "documented-authored-4ee8ad32a810d282b65c"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}
